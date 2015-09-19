@@ -1,18 +1,18 @@
-package BookAuthor;
+package Testbook;
 
 /**
- * Created by Iram Tazim Hoque on 17-Sep-15.
+ * Created by Lavin on 9/19/2015.
  */
 public class TestBook {
-    public static void main(String args[]){
-        Author schildt=new Author("Herbert Schildt", "herbert@schildt.com");
+    public static void main(String args[]) {
+        Author schildt = new Author("Herbert Schildt", "herbert@schildt.com");
         System.out.println(schildt.getName() + " at " + schildt.getEmail());
 
-        Author bjarne=new Author("Bjarne Stroustrup");
+        Author bjarne = new Author("Bjarne Stroustrup");
         bjarne.setEmail("bjarne@bjarne.com");
         bjarne.print();
 
-        Book b1=new Book("Teach Yourself C++", schildt);
+        Book b1 = new Book("Teach Yourself C++", schildt);
         b1.setPrice(150.5);
         b1.setStock(50);
         System.out.println("Author: " + b1.getAuthorName() + " Name: " + b1.getName() + " Price: " + b1.getPrice() + " Stock: " + b1.getStock());
@@ -21,7 +21,7 @@ public class TestBook {
         System.out.println("Author: " + b1.getAuthorName() + " Name: " + b1.getName() + " Price: " + b1.getPrice() + " Stock: " + b1.getStock());
 
 
-        Book b2=new Book("The C++ Programming Language", bjarne, 200, 20);
+        Book b2 = new Book("The C++ Programming Language", bjarne, 200, 20);
         b2.print();
         b2.returnBook(10);
         b2.borrowBook(50);
@@ -30,12 +30,4 @@ public class TestBook {
         b1.getAuthor().print();
         b2.getAuthor().print();
     }
-
-
-
-
-
-
-
-
 }
